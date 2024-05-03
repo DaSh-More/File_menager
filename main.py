@@ -115,7 +115,7 @@ while True:
         if len(args) < 1:
             cprint("Не указано название файла")
             continue
-        file = current_dir / args[0]
+        file = get_path(args[0], current_dir, maindir)
         if file.exists():
             cprint(f"Файл {cwd(file)} уже существует")
             continue
